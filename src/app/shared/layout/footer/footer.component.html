@@ -1,9 +1,34 @@
 <footer>
-    <div class="container">
-        <a class="logo-font" routerLink="/">ToDo App</a>
-        <span class="attribution">
-      &copy; {{ today | date: 'yyyy' }}.
-      A learning project of Petar Stoyanov.
-    </span>
-    </div>
+    <section class="footer py-3 bg-dark text-white">
+        <div class="row mx-auto justify-content-center">
+            <div class="col-12 col-md-4">
+                <ul class="list-inline list-unstyled">
+                    <a class="logo-font" routerLink="/">Home</a>
+                </ul>
+            </div>
+            <div class="col-12 col-md-4">
+                <ul class="list-inline float-md-right">
+                    <li class="list-inline-item ml-3">
+                        <a href="https://www.linkedin.com/in/peshostoyanov/" target="_blank" class="text-white">
+                            <i class="fa fa-linkedin-square contact" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item ml-3">
+                        <a href="https://github.com/peter-stoyanov" target="_blank" class="text-white">
+                            <i class="fa fa-github contact" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item ml-3">
+                        <a href="mailto:pesho.stoyanov@gmail.com" target="_blank" class="text-white">
+                            <i class="fa fa-envelope-o contact" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <time><i class="fa fa-copyright" aria-hidden="true"></i> &copy; {{ today | date: 'yyyy' }}.</time>
+            <span>A learning project of Petar Stoyanov.</span>
+        </div>
+    </section>
 </footer>

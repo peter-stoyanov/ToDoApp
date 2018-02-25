@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SharedModule, HeaderComponent, FooterComponent, ShowAuthedDirective } from './shared';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { TodoListComponent } from './todos/todo-list/todo-list.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ShowAuthedDirective
+    ShowAuthedDirective,
+    TodoListComponent
   ],
   imports: [
     BrowserModule,
