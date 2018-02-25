@@ -8,7 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
 import { TodoListComponent } from './todos/todo-list/todo-list.component';
 import { 
-  SharedModule, 
   HeaderComponent, 
   FooterComponent, 
   ShowAuthedDirective, 
@@ -16,7 +15,8 @@ import {
   ApiService,
   AuthGuard,
   JwtService,
-  UserService} from './shared';
+  UserService,
+  SharedModule} from './shared';
 
 
 @NgModule({
@@ -24,16 +24,14 @@ import {
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ErrorListComponent,
-    ShowAuthedDirective,
     TodoListComponent
   ],
   imports: [
     BrowserModule,
-    SharedModule,
     RouterModule,
     AppRoutingModule,
-    AuthModule
+    AuthModule,
+    SharedModule
   ],
   providers: [
     ApiService,
