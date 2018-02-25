@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { TodoListComponent } from './todos/todo-list/todo-list.component';
 
 
 const appRoutes: Routes = [
-  { path: '', component: AppComponent }
+  { path: '', component: TodoListComponent }
   //{ path: '', redirectTo: '/', pathMatch: 'full' }
 ];
 

@@ -1,52 +1,43 @@
-<nav class="navbar navbar-light">
-    <div class="container">
-        <a class="navbar-brand" routerLink="/">ToDo App</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" routerLink="/">ToDo App</a>
 
-        <!-- Show this for logged out users -->
-        <ul *showAuthed="false" class="nav navbar-nav pull-xs-right">
+    <!-- Show this for logged out users -->
+    <ul *showAuthed="false" class="nav navbar-nav pull-xs-right">
 
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/">
-          Home
-        </a>
-            </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/">Home</a>
+        </li>
 
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/login" routerLinkActive="active">
-          Sign in
-        </a>
-            </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/login" routerLinkActive="active">Sign in</a>
+        </li>
 
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/register" routerLinkActive="active">
-          Sign up
-        </a>
-            </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/register" routerLinkActive="active">Sign up</a>
+        </li>
 
-        </ul>
+    </ul>
 
-        <!-- Show this for logged in users -->
-        <ul *showAuthed="true" class="nav navbar-nav pull-xs-right">
+    <!-- Show this for logged in users -->
+    <ul *showAuthed="true" class="nav navbar-nav pull-xs-right">
 
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-          Home
-        </a>
-            </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </li>
 
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/editor" routerLinkActive="active">
-                    <i class="ion-compose"></i>&nbsp;New Article
-                </a>
-            </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/editor" routerLinkActive="active">
+                <i class="ion-compose"></i>&nbsp;New Article
+            </a>
+        </li>
 
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/settings" routerLinkActive="active">
-                    <i class="ion-gear-a"></i>&nbsp;Settings
-                </a>
-            </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/settings" routerLinkActive="active">
+                <i class="ion-gear-a"></i>&nbsp;Settings
+            </a>
+        </li>
 
-            <!-- <li class="nav-item">
+        <!-- <li class="nav-item">
         <a class="nav-link"
           [routerLink]="['/profile', currentUser.username]"
           routerLinkActive="active">
@@ -55,7 +46,6 @@
         </a>
       </li> -->
 
-        </ul>
+    </ul>
 
-    </div>
 </nav>
