@@ -5,13 +5,18 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { AuthModule } from './auth/auth.module';
 import { TodoListComponent } from './todos/todo-list/todo-list.component';
 import { 
   SharedModule, 
   HeaderComponent, 
   FooterComponent, 
   ShowAuthedDirective, 
-  ErrorListComponent } from './shared';
+  ErrorListComponent, 
+  ApiService,
+  AuthGuard,
+  JwtService,
+  UserService} from './shared';
 
 
 @NgModule({
@@ -27,9 +32,15 @@ import {
     BrowserModule,
     SharedModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AuthModule
   ],
-  providers: [],
+  providers: [
+    ApiService,
+    AuthGuard,
+    JwtService,
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
