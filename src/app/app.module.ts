@@ -18,7 +18,7 @@ import {
   UserService,
   SharedModule} from './shared';
 
-
+  
 @NgModule({
   declarations: [
     AppComponent,
