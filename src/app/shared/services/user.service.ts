@@ -70,7 +70,8 @@ export class UserService {
   }
 
   getCurrentUser(): User {
-    return this.currentUserSubject.value;
+    //return this.currentUserSubject.value;
+    return new User(1,'pesho@test.com','peshoStoyanov');
   }
 
   // Update the user on the server (email, pass, etc)

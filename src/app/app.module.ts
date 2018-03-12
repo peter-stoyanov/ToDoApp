@@ -17,6 +17,8 @@ import {
   UserService,
   SharedModule} from './shared';
 import { AuthGuard } from './auth/auth-guard.service';
+import { TodoItemComponent } from './todos/todo-item/todo-item.component';
+import { TodosService } from './todos/todos.service';
 
   
 @NgModule({
@@ -24,7 +26,8 @@ import { AuthGuard } from './auth/auth-guard.service';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    TodoListComponent
+    TodoListComponent,
+    TodoItemComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import { AuthGuard } from './auth/auth-guard.service';
     ApiService,
     AuthGuard,
     JwtService,
-    UserService
+    UserService,
+    TodosService
   ],
   bootstrap: [AppComponent]
 })
