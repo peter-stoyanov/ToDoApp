@@ -13,10 +13,10 @@ import {
   ShowAuthedDirective, 
   ErrorListComponent, 
   ApiService,
-  AuthGuard,
   JwtService,
   UserService,
   SharedModule} from './shared';
+import { AuthGuard } from './auth/auth-guard.service';
 
   
 @NgModule({
