@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent, FooterComponent } from './layout';
 import { ErrorListComponent } from './error-list/error-list.component';
 import { ShowAuthedDirective } from './directives/show-authed.directive';
+import { NotFoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { ShowAuthedDirective } from './directives/show-authed.directive';
   ],
   declarations: [
     ErrorListComponent,
-    ShowAuthedDirective
+    ShowAuthedDirective,
+    NotFoundComponent
   ],
   exports: [
     CommonModule,
@@ -26,6 +28,7 @@ import { ShowAuthedDirective } from './directives/show-authed.directive';
     ReactiveFormsModule,
     HttpClientModule,
     ErrorListComponent,
+    NotFoundComponent,
     RouterModule,
     ShowAuthedDirective
   ]

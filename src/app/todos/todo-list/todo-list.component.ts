@@ -1,20 +1,43 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Todo } from '../todo.model';
 import { TodosService } from '../todos.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-todo-list',
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.css']
 })
-export class TodoListComponent implements OnInit {
+export class TodoListComponent implements OnInit, OnDestroy {
 
+  
   todos: Todo[];
 
-  constructor(private todosService: TodosService) { }
+  private subscription: Subscription;
+
+  constructor(
+    private todosService: TodosService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
     this.todos = this.todosService.getTodos();
+    this.subscription = this.todosService.todosChanged
+      .subscribe(
+        (todos: Todo[]) => {
+          this.todos = todos;
+        }
+      )
   }
 
+  onNewTodo() {
+    this.router.navigate(['/todos/new']);
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
+  
 }

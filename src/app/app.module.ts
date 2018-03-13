@@ -19,6 +19,8 @@ import {
 import { AuthGuard } from './auth/auth-guard.service';
 import { TodoItemComponent } from './todos/todo-item/todo-item.component';
 import { TodosService } from './todos/todos.service';
+import { TodoEditComponent } from './todos/todo-edit/todo-edit.component';
+import { FormsModule } from '@angular/forms';
 
   
 @NgModule({
@@ -27,11 +29,13 @@ import { TodosService } from './todos/todos.service';
     HeaderComponent,
     FooterComponent,
     TodoListComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    TodoEditComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
+    FormsModule,
     AppRoutingModule,
     AuthModule,
     SharedModule

@@ -3,4 +3,11 @@
         <app-todo-item *ngFor="let todo of todos" [todo]="todo">
         </app-todo-item>
     </div>
+    <div class="col-md-2">
+      <button 
+        class="btn btn-success" 
+        (click)="onNewTodo()">New ToDo</button>
+    
+        <router-outlet></router-outlet>
+    </div>
 </div>

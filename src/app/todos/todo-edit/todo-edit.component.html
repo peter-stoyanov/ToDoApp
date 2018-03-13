@@ -1,0 +1,58 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+    <div class="row">
+        <div class="col-xs-12">
+            <button 
+                type="submit" 
+                class="btn btn-success" 
+                [disabled]="!f.valid">Save</button>
+            <button 
+                type="button" 
+                class="btn btn-danger" 
+                (click)="onCancel()">Cancel</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input 
+                    [ngModel]="todo.title" 
+                    type="text" 
+                    id="title" 
+                    name="title" 
+                    class="form-control">
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group">
+                <label for="body">Body</label>
+                <input 
+                    [ngModel]="todo.body" 
+                    type="text" 
+                    id="body" 
+                    name="body" 
+                    class="form-control">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group">
+                <label for="due-date">Due date</label>
+                <input 
+                    [ngModel]="todo.dueDate" 
+                    type="date" 
+                    id="due-date" 
+                    name="due-date" 
+                    class="form-control">
+            </div>
+        </div>
+    </div>
+
+</form>
