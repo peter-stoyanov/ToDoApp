@@ -15,7 +15,8 @@ import {
   ApiService,
   JwtService,
   UserService,
-  SharedModule} from './shared';
+  SharedModule,
+  OrderByPipe} from './shared';
 import { AuthGuard } from './auth/auth-guard.service';
 import { TodoItemComponent } from './todos/todo-item/todo-item.component';
 import { TodosService } from './todos/todos.service';
@@ -30,7 +31,8 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     TodoListComponent,
     TodoItemComponent,
-    TodoEditComponent
+    TodoEditComponent,
+    OrderByPipe
   ],
   imports: [
     BrowserModule,

@@ -43,7 +43,7 @@ export class TodoEditComponent implements OnInit {
       this.id,
       form.value['title'],
       form.value['body'],
-      form.value['dueDate'],
+      new Date(form.value['due-date']),
       false,
       this.usersService.getCurrentUser()
   )
