@@ -6,7 +6,7 @@
         <p class="card-text">{{ todo.dueDate | date: 'short' }}</p>
         <a
             class="btn btn-primary"
-            [routerLink]="['/todos/edit', todo.id - 1]" >
+            [routerLink]="['/todos/edit', todo.id]" >
             Edit
         </a>
     </div>

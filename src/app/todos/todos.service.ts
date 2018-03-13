@@ -34,6 +34,7 @@ export class TodosService {
     }
 
     getTodo(id: number): Todo | null {
+        id = id - 1;
         return id >= 0 && id < this.todos.length ? this.todos[id] : null;
     }
 
@@ -44,7 +45,7 @@ export class TodosService {
     }
 
     update(index: number, todo: Todo) {
-        this.todos[index] = todo;
+        this.todos[index - 1] = todo;
         this.todosChanged.next(this.todos.slice());
 
     }
