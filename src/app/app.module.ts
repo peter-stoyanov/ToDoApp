@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
@@ -22,6 +25,7 @@ import { TodoItemComponent } from './todos/todo-item/todo-item.component';
 import { TodosService } from './todos/todos.service';
 import { TodoEditComponent } from './todos/todo-edit/todo-edit.component';
 import { FormsModule } from '@angular/forms';
+import { environment } from '../environments/environment';
 
   
 @NgModule({
@@ -40,7 +44,10 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     AppRoutingModule,
     AuthModule,
-    SharedModule
+    SharedModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [
     ApiService,

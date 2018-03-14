@@ -23,7 +23,14 @@ export class TodoListComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
-    this.todos = this.todosService.getTodos();
+    this.todosService.getTodos().subscribe(
+      (data: Todo[]) => {
+        console.log(data);
+        this.todos = data;
+      }
+    );
+
+
     this.subscription = this.todosService.todosChanged
       .subscribe(
         (todos: Todo[]) => {

@@ -10,13 +10,18 @@ import { SignupComponent } from './signup/signup.component';
 
 const authRouting: ModuleWithProviders = RouterModule.forChild([
   {
+    path: 'test',
+    redirectTo: '/'
+    //canActivate: [AuthGuard]
+  },
+  {
     path: 'signin',
-    component: SigninComponent,
+    component: SigninComponent
     //canActivate: [AuthGuard]
   },
   {
     path: 'signup',
-    component: SignupComponent,
+    component: SignupComponent
     //canActivate: [AuthGuard]
   }
 ]);

@@ -6,7 +6,11 @@ import {Pipe, PipeTransform} from '@angular/core';
 export class OrderByPipe{
 
  transform(array, orderBy, asc = true){
- 
+
+    if (!array) {
+      return array;
+    }
+    
      if (!orderBy || orderBy.trim() == ""){
        return array;
      } 

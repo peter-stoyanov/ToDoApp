@@ -13,8 +13,8 @@ import 'rxjs/add/operator/map';
 })
 export class TodoEditComponent implements OnInit {
 
-  private id: number;
-  private todo: Todo = new Todo(0,'','', new Date(),false,null);
+  private id: string;
+  private todo: Todo = new Todo('','','', new Date(),false);
   private editMode: boolean = false;
   
   constructor(
@@ -29,7 +29,7 @@ export class TodoEditComponent implements OnInit {
       .subscribe(
         (params: Params) => {
           console.log(params)
-          this.id = +params['id'];
+          this.id = params['id'];
           this.editMode = params['id'] != null;
           if (this.editMode) {
             this.todo = this.todosService.getTodo(this.id);
@@ -44,8 +44,7 @@ export class TodoEditComponent implements OnInit {
       form.value['title'],
       form.value['body'],
       new Date(form.value['due-date']),
-      false,
-      this.usersService.getCurrentUser()
+      false
   )
 
     if (this.editMode) {
